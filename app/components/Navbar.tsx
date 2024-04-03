@@ -3,18 +3,18 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="relative h-125">
-      <div className="absolute inset-0 z-[1]">
+    <nav className="relative h-64">
+      <div className="absolute inset-0">
         <Image
           src="/nav-bg.png"
           alt="Foto da Chacara Panoramica"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
+          fill
+          className="object-cover object-center blur-[1px]"
+          priority
         />
-        <div className="absolute bg-black opacity-40 inset-0"></div>
+        <div className="absolute bg-black opacity-20 inset-0"></div>
       </div>
-      <div className="relative container mx-auto flex flex-col justify-center items-center space-y-8 text-white px-4 z-10">
+      <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
         <div className="flex justify-evenly w-1/2 mt-5 text-xl">
           <Link href={""}>Home</Link>
           <Link href={""}>About</Link>
@@ -25,6 +25,7 @@ export default function Navbar() {
           alt="Logotipo da Chacara"
           width={200}
           height={200}
+          priority
         />
       </div>
     </nav>
