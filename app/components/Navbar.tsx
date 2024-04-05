@@ -9,7 +9,7 @@ export default function Navbar() {
           src="/nav-bg.png"
           alt="Foto da Chacara Panoramica"
           fill
-          className="object-cover object-center blur-[1px]"
+          className="object-cover object-center blur-[0.5px]"
           priority
         />
         <div className="absolute bg-black opacity-20 inset-0"></div>

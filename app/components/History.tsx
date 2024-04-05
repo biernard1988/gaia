@@ -3,7 +3,7 @@ import React from "react";
 
 export default function History() {
   return (
-    <section className="h-screen w-full text-black bg-stone-50 flex flex-col justify-center md:flex-row p-5">
+    <section className="h-screen w-full text-white flex flex-col justify-center md:flex-row p-5">
       <div className="w-1/2 place-content-center p-4">
         <Image
           src="/front.png"

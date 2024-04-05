@@ -30,13 +30,13 @@ const images = [
     id: 4,
     src: "/photos/20240104_144707.jpg",
     alt: "Image 4",
-    caption: "Quarto - 3 camas",
+    caption: "Quarto de família",
   },
   {
     id: 5,
     src: "/photos/20240104_144837.jpg",
     alt: "Image 5",
-    caption: "Quarto - 3 camas",
+    caption: "Quarto de família",
   },
   {
     id: 6,
@@ -96,18 +96,16 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="h-screen flex flex-col justify-center items-center mt-20">
-      {/* <h1 className="text-white uppercase text-6xl font-extrabold">
-          Galeria
-        </h1> */}
+    <section className="h-screen flex flex-col justify-center items-center mt-20 gap-3 mb-10">
+      <h1 className="text-white uppercase text-6xl font-extrabold">Galeria</h1>
       <div>
-        <Carousel className="w-full max-w-sm lg:max-w-4xl">
+        <Carousel
+          className="w-full max-w-sm md:max-w-3xl"
+          opts={{ align: "start", loop: true }}
+        >
           <CarouselContent>
             {images.map((image) => (
-              <CarouselItem
-                key={image.id}
-                className="flex flex-col justify-center items-center gap-3 basis-auto"
-              >
+              <CarouselItem key={image.id} className="basis-auto">
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -116,7 +114,7 @@ export default function Gallery() {
                   className="rounded-lg"
                 />
 
-                <p className="text-white text-xl font-semibold">
+                <p className="text-white text-xl font-semibold text-center">
                   {image.caption}
                 </p>
               </CarouselItem>
