@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import History from "./components/History";
 import Image from "next/image";
@@ -27,6 +28,7 @@ export default function Home() {
       </main>
       <History />
       <Gallery />
+      <Contact />
     </>
   );
 }

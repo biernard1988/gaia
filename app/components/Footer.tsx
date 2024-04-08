@@ -27,7 +27,8 @@ export default function Footer() {
         <div className="flex flex-col items-end gap-5">
           <div className="text-end">
             <h3>2024 Estr. do Baixo Rio, Rio Preto da Eva</h3>
-            <h3>CEP-69117-000, Brasil</h3>
+            <h3>Caixa Postal: 69117-000</h3>
+            <h3>Amazonas - Brasil</h3>
             <h3>info@sitiogaia.com</h3>
           </div>
           <div className="flex gap-3 text-2xl">
