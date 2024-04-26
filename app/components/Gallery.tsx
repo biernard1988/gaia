@@ -1,3 +1,4 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
@@ -5,9 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
 import Image from "next/image";
+import { useState } from "react";
 
-const images = [
+interface ImageData {
+  id: number;
+  src: string;
+  alt: string;
+  caption: string;
+}
+
+const images: ImageData[] = [
   {
     id: 1,
     src: "/photos/20231228_173727.jpg",
@@ -95,20 +105,35 @@ const images = [
 ];
 
 export default function Gallery() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = (imageSrc: string) => {
+    setSelectedImage(imageSrc);
+  };
+
+  const closeDialog = () => {
+    setSelectedImage(null);
+  };
   return (
     <section
       id="gallery"
-      className="h-screen flex flex-col justify-center items-center mt-20 gap-3 mb-10"
+      className="h-screen flex flex-col justify-center items-center mt-20 mb-10"
     >
-      <h1 className="text-white uppercase text-6xl font-extrabold">Galeria</h1>
-      <div>
+      <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold mb-10">
+        Galeria
+      </h1>
+      <div className="">
         <Carousel
-          className="w-full max-w-sm md:max-w-3xl"
+          className="max-w-sm md:max-w-3xl"
           opts={{ align: "start", loop: true }}
         >
           <CarouselContent>
             {images.map((image) => (
-              <CarouselItem key={image.id} className="basis-auto">
+              <CarouselItem
+                key={image.id}
+                className="sm:basis-0 md:basis-auto cursor-pointer"
+                onClick={() => handleImageClick(image.src)}
+              >
                 <Image
                   src={image.src}
                   alt={image.alt}
@@ -127,6 +152,23 @@ export default function Gallery() {
           <CarouselNext />
         </Carousel>
       </div>
+      <Dialog open={!!selectedImage}>
+        <DialogContent onClick={closeDialog}>
+          {selectedImage && (
+            <Image
+              src={selectedImage}
+              alt="Imagem selecionada"
+              width={500}
+              height={500}
+            />
+          )}
+          <DialogClose asChild>
+            <button className="font-semibold text-white" onClick={closeDialog}>
+              Fechar
+            </button>
+          </DialogClose>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }

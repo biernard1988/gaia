@@ -75,7 +75,7 @@ export default function Contact() {
     >
       <form onSubmit={handleSubmit} ref={form} className="w-full md:max-w-lg">
         <div className="flex flex-col gap-6">
-          <h1 className="text-center uppercase text-6xl font-extrabold">
+          <h1 className="text-center uppercase text-5xl md:text-6xl font-extrabold">
             Contato
           </h1>
           <label htmlFor="email">Seu email</label>
