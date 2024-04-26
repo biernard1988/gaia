@@ -8,14 +8,12 @@ export default function Footer() {
   return (
     <section className="h-56 text-white border-t border-neutral-800 container mx-auto">
       <div className="flex justify-between mt-10">
-        <ul className="space-y-2">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contacts</li>
-          <li>Calendar</li>
-          <li>FAQs</li>
-        </ul>
-        <div className="pl-60">
+        <div className="flex flex-col gap-5">
+          <Link href="#home">Início</Link>
+          <Link href="#history">História</Link>
+          <Link href="#">FAQ</Link>
+        </div>
+        <div className="pl-60 hidden md:block">
           <Image
             src="/logo-cru.png"
             alt="Logo Chácara"
@@ -26,7 +24,7 @@ export default function Footer() {
 
         <div className="flex flex-col items-end gap-5">
           <div className="text-end">
-            <h3>2024 Estr. do Baixo Rio, Rio Preto da Eva</h3>
+            <h3>Estr. do Baixo Rio n-2024, Rio Preto da Eva</h3>
             <h3>Caixa Postal: 69117-000</h3>
             <h3>Amazonas - Brasil</h3>
             <h3>info@sitiogaia.com</h3>
@@ -38,7 +36,10 @@ export default function Footer() {
             >
               <LuInstagram />
             </Link>
-            <Link href={""}>
+            <Link
+              href={"https://m.facebook.com/fehmeninaterapias"}
+              target="_blank"
+            >
               <LuFacebook />
             </Link>
             <Link
@@ -52,7 +53,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center text-sm text-stone-400">
+      <div className="text-center text-sm text-stone-400 mt-5 md:mt-0">
         <p>&copy;ChácaraGaia All Rights Reserverd 2024</p>
       </div>
     </section>

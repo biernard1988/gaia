@@ -16,9 +16,9 @@ export default function Navbar() {
       </div>
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
         <div className="flex justify-evenly w-1/2 mt-5 text-xl">
-          <Link href={""}>Home</Link>
-          <Link href={""}>About</Link>
-          <Link href={""}>Contacts</Link>
+          <Link href="#history">História</Link>
+          <Link href="#contact">Contatos</Link>
+          <Link href="#gallery">Galeria</Link>
         </div>
         <Image
           src="/logo.png"

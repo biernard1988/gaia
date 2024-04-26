@@ -69,7 +69,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="h-4/5 text-white mx-auto container flex justify-center items-center w-100 mb-14">
+    <section
+      id="contact"
+      className="h-4/5 text-white mx-auto container flex justify-center items-center w-100 mb-14"
+    >
       <form onSubmit={handleSubmit} ref={form} className="w-full md:max-w-lg">
         <div className="flex flex-col gap-6">
           <h1 className="text-center uppercase text-6xl font-extrabold">

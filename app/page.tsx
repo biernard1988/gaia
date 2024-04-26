@@ -14,7 +14,10 @@ export default function Home() {
           className="object-center blur-[0.6px]"
         />
 
-        <div className="container mx-auto space-y-10 z-10 text-white ml-28 w-full">
+        <div
+          id="home"
+          className="container mx-auto space-y-10 z-10 text-white ml-28 w-full"
+        >
           <h1 className="uppercase md:text-6xl sm:text-3xl font-semibold font-sans">
             Chácara GAIA
           </h1>

@@ -96,7 +96,10 @@ const images = [
 
 export default function Gallery() {
   return (
-    <section className="h-screen flex flex-col justify-center items-center mt-20 gap-3 mb-10">
+    <section
+      id="gallery"
+      className="h-screen flex flex-col justify-center items-center mt-20 gap-3 mb-10"
+    >
       <h1 className="text-white uppercase text-6xl font-extrabold">Galeria</h1>
       <div>
         <Carousel
