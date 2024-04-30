@@ -67,16 +67,16 @@ export default function Navbar() {
               <span className="ml-2">História</span>
             </Link>
             <Link
-              href="#contact"
-              className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
-            >
-              <span className="ml-2">Contatos</span>
-            </Link>
-            <Link
               href="#gallery"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
             >
               <span className="ml-2">Galeria</span>
+            </Link>
+            <Link
+              href="#contact"
+              className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
+            >
+              <span className="ml-2">Contatos</span>
             </Link>
           </div>
         )}

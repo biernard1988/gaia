@@ -30,7 +30,8 @@ export default function Footer() {
 
         <div className="flex flex-col items-end gap-5">
           <div className="text-end">
-            <h3>Estr. do Baixo Rio n-2024, Rio Preto da Eva</h3>
+            <h3>Estr. do Baixo Rio, n-410</h3>
+            <h3>Rio Preto da Eva</h3>
             <h3>CEP: 69117-000</h3>
             <h3>Amazonas - Brasil</h3>
             <h3>chacaragaiaam@gmail.com</h3>
@@ -63,7 +64,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-sm text-stone-400 mt-5 md:mt-0">
-        <p>&copy;ChácaraGaia All Rights Reserverd 2024</p>
+        <p>&copy;ChácaraGaia - All Rights Reserverd</p>
       </div>
     </section>
   );
