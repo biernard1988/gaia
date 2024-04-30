@@ -6,14 +6,17 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <main className="relative container h-screen w-full mt-20 flex items-center">
-        <div id="home" className="container mx-auto space-y-10 z-10 text-white">
-          <h1 className="uppercase md:text-6xl sm:text-3xl font-semibold font-sans">
+      <main
+        className="container h-screen mx-auto w-full flex flex-col md:flex-row items-center md:justify-center md:border-b md:border-neutral-800 scroll-smooth"
+        id="home"
+      >
+        <div className="space-y-5 my-20 md:my-0 text-white">
+          <h1 className="uppercase md:text-6xl text-4xl font-semibold font-sans">
             Chácara GAIA
           </h1>
-          <p className="md:text-2xl sm:text-xl font-sans pl-5">
+          <p className="md:text-2xl text-xl font-sans pl-5">
             Ecoturismo e lazer no coração de <br />
-            <span className="text-slate-400 sm:text-2xl md:text-4xl uppercase font-extrabold italic">
+            <span className="text-slate-400 text-2xl md:text-4xl uppercase font-extrabold italic">
               Rio Preto da Eva
             </span>
           </p>
@@ -23,7 +26,7 @@ export default function Home() {
           width={500}
           height={500}
           alt="Foto da entrada da Casa Principal"
-          className="w-[900px] rounded-lg"
+          className="w-[900px] rounded-lg mt-5"
         />
       </main>
       <History />

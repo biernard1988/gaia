@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className="relative h-64">
       <div className="absolute inset-0">
@@ -14,11 +17,27 @@ export default function Navbar() {
         />
         <div className="absolute bg-black opacity-20 inset-0"></div>
       </div>
+
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
-        <div className="flex justify-evenly w-1/2 mt-5 text-xl">
-          <Link href="#history">História</Link>
-          <Link href="#contact">Contatos</Link>
-          <Link href="#gallery">Galeria</Link>
+        <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-semibold">
+          <Link
+            className="hover:text-yellow-300 transition-all hover:animate-pulse"
+            href="#history"
+          >
+            História
+          </Link>
+          <Link
+            className="hover:text-yellow-300 transition-all hover:animate-pulse"
+            href="#contact"
+          >
+            Contatos
+          </Link>
+          <Link
+            className="hover:text-yellow-300 transition-all hover:animate-pulse"
+            href="#gallery"
+          >
+            Galeria
+          </Link>
         </div>
         <Image
           src="/logo.png"

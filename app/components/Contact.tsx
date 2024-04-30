@@ -71,7 +71,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="h-4/5 text-white mx-auto container flex justify-center items-center w-100 mb-14"
+      className="h-4/5 text-white mx-auto container flex justify-center items-center w-100 md:my-14"
     >
       <form onSubmit={handleSubmit} ref={form} className="w-full md:max-w-lg">
         <div className="flex flex-col gap-6">
@@ -100,7 +100,7 @@ export default function Contact() {
           ></textarea>
           <button
             type="submit"
-            className={`bg-green-500 hover:bg-gradient-to-r from-cyan-500 to-green-500 hover:text-black font-medium py-2.5 px-5 rounded-lg w-full ${
+            className={`border border-yellow-200 hover:bg-gradient-to-r from-yellow-200 to-yellow-600 transition-all hover:text-black font-medium py-2.5 px-5 rounded-lg w-full ${
               isSending ? "opacity-50 cursor-not-allowed" : ""
             }`}
             disabled={isSending}

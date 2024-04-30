@@ -117,21 +117,21 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="h-screen flex flex-col justify-center items-center mt-20 mb-10"
+      className="container mx-auto h-screen flex flex-col justify-center items-center gap-10 md:border-b md:border-neutral-800 md:mt-20"
     >
-      <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold mb-10">
+      <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold">
         Galeria
       </h1>
       <div className="">
         <Carousel
-          className="max-w-sm md:max-w-3xl"
+          className="max-w-xs md:max-w-xl"
           opts={{ align: "start", loop: true }}
         >
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem
                 key={image.id}
-                className="sm:basis-0 md:basis-auto cursor-pointer"
+                className="lg:basis-auto cursor-pointer flex flex-col items-center justify-center"
                 onClick={() => handleImageClick(image.src)}
               >
                 <Image

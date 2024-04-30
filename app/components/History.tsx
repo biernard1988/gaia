@@ -5,7 +5,7 @@ export default function History() {
   return (
     <section
       id="history"
-      className="h-screen w-full text-white flex flex-col justify-center md:flex-row p-5"
+      className="container h-screen w-full text-white flex flex-col justify-center md:flex-row p-5 md:border-b md:border-neutral-800"
     >
       <div className="place-content-center p-4">
         <Image
