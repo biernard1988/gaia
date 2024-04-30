@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <main
-        className="container h-screen mx-auto w-full flex flex-col md:flex-row items-center md:justify-center md:border-b md:border-neutral-800 scroll-smooth"
+        className="container h-screen mx-auto w-full flex flex-col md:flex-row items-center md:justify-center md:border-b md:border-neutral-800"
         id="home"
       >
         <div className="space-y-5 my-20 md:my-0 text-white">

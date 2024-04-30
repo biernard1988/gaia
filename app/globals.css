@@ -9,6 +9,10 @@
   outline: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* background-color: rgb(18, 18, 18); */
   background-image: url("../public/darker.png");

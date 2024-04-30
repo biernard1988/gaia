@@ -9,9 +9,15 @@ export default function Footer() {
     <section className="h-56 text-white border-t border-neutral-800 container mx-auto">
       <div className="flex justify-between mt-10">
         <div className="flex flex-col gap-5">
-          <Link href="#home">Início</Link>
-          <Link href="#history">História</Link>
-          <Link href="#">FAQ</Link>
+          <Link className="hover:text-amber-300" href="#home">
+            Início
+          </Link>
+          <Link className="hover:text-amber-300" href="#history">
+            História
+          </Link>
+          <Link className="hover:text-amber-300" href="#gallery">
+            Galeria
+          </Link>
         </div>
         <div className="pl-60 hidden md:block">
           <Image
@@ -29,20 +35,23 @@ export default function Footer() {
             <h3>Amazonas - Brasil</h3>
             <h3>chacaragaiaam@gmail.com</h3>
           </div>
-          <div className="flex gap-3 text-2xl">
+          <div className="flex gap-3 text-2xl transition-all">
             <Link
+              className="hover:text-amber-300"
               href={"https://www.instagram.com/chacara_gaia/"}
               target="_blank"
             >
               <LuInstagram />
             </Link>
             <Link
+              className="hover:text-amber-300"
               href={"https://m.facebook.com/fehmeninaterapias"}
               target="_blank"
             >
               <LuFacebook />
             </Link>
             <Link
+              className="hover:text-amber-300"
               href={
                 "https://www.airbnb.com/rooms/967659341829689048?check_in=2024-04-05&check_out=2024-04-10&guests=1&adults=1&s=67&unique_share_id=77ddcc9f-3037-4c41-83b5-1478ed5f0efb"
               }
