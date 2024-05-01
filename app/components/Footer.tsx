@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <section className="h-56 text-white border-t border-neutral-800 container mx-auto">
       <div className="flex justify-between mt-10">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col w-1/3 gap-5">
           <Link className="hover:text-amber-300" href="#home">
             Início
           </Link>
@@ -19,7 +19,7 @@ export default function Footer() {
             Galeria
           </Link>
         </div>
-        <div className="pl-60 hidden md:block">
+        <div className="hidden w-1/3 justify-center items-start md:flex">
           <Image
             src="/logo-cru.png"
             alt="Logo Chácara"
@@ -28,7 +28,7 @@ export default function Footer() {
           />
         </div>
 
-        <div className="flex flex-col items-end gap-5">
+        <div className="flex flex-col w-1/3 items-end gap-5">
           <div className="text-end">
             <h3>Estr. do Baixo Rio, n-410</h3>
             <h3>Rio Preto da Eva</h3>
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-sm text-stone-400 mt-5 md:mt-0">
-        <p>&copy;ChácaraGaia - All Rights Reserverd</p>
+        <p>&copy;Chácara Gaia - All Rights Reserverd</p>
       </div>
     </section>
   );

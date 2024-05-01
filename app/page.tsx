@@ -11,12 +11,12 @@ export default function Home() {
         id="home"
       >
         <div className="space-y-5 my-20 md:my-0 text-white">
-          <h1 className="uppercase md:text-6xl text-4xl font-semibold font-sans">
+          <h1 className="uppercase md:text-5xl lg:text-6xl text-4xl font-semibold font-sans">
             Chácara GAIA
           </h1>
           <p className="md:text-2xl text-xl font-sans pl-5">
             Ecoturismo e lazer no coração de <br />
-            <span className="text-slate-400 text-2xl md:text-4xl uppercase font-extrabold italic">
+            <span className="text-slate-400 text-2xl md:text-3xl lg:text-4xl uppercase font-extrabold italic">
               Rio Preto da Eva
             </span>
           </p>

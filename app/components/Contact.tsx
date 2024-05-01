@@ -2,10 +2,15 @@
 import React, { useRef, useState, FormEvent } from "react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState<boolean>(false);
+
+  const serviceID = process.env.SERVICE_ID;
+  const templateID = process.env.TEMPLATE_ID;
+  const userID = process.env.USER_ID;
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -13,10 +18,10 @@ export default function Contact() {
     try {
       if (form.current) {
         const result: EmailJSResponseStatus = await emailjs.sendForm(
-          "",
-          "",
+          "service_dodm32w",
+          "template_8cqu7n7",
           form.current,
-          ""
+          "VZknpnI-pjMDvsOyv"
         );
         console.log(result.text);
         notify(); // Notificar quando o e-mail for enviado com sucesso
@@ -55,7 +60,7 @@ export default function Contact() {
       await sendEmail(e); // Se todos os campos estiverem preenchidos, envia o e-mail
     } else {
       // Caso contrário, exibe uma mensagem de erro
-      toast.error("Please fill in all fields", {
+      toast.error("Por favor preencha todo formulário!", {
         position: "top-right",
         autoClose: 2000,
         hideProgressBar: false,
@@ -94,6 +99,9 @@ export default function Contact() {
           />
           <label htmlFor="message">Mensagem</label>
           <textarea
+            className="resize-none"
+            cols={10}
+            rows={8}
             name="message"
             id="message"
             placeholder="Envie sua mensagem..."

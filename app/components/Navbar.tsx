@@ -21,7 +21,7 @@ export default function Navbar() {
       </div>
 
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
-        <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-semibold">
+        <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-extrabold">
           <Link
             className="hover:text-amber-400 transition-all hover:animate-pulse"
             href="#history"

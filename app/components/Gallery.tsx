@@ -92,12 +92,24 @@ const images: ImageData[] = [
   },
   {
     id: 13,
+    src: "/photos/IMG-20230820-WA0002.jpg",
+    alt: "Image 13",
+    caption: "Entrada Piscina",
+  },
+  {
+    id: 14,
+    src: "/photos/IMG-20231231-WA0030.jpg",
+    alt: "Image 13",
+    caption: "Piscina",
+  },
+  {
+    id: 15,
     src: "/photos/IMG-20231016-WA0044.jpg",
     alt: "Image 13",
     caption: "Igarapé",
   },
   {
-    id: 14,
+    id: 16,
     src: "/photos/IMG-20240213-WA0014.jpg",
     alt: "Image 14",
     caption: "Igarapé",
@@ -158,8 +170,8 @@ export default function Gallery() {
             <Image
               src={selectedImage}
               alt="Imagem selecionada"
-              width={500}
-              height={500}
+              width={800}
+              height={800}
             />
           )}
           <DialogClose asChild>
