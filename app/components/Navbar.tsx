@@ -8,7 +8,7 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="relative h-64">
+    <nav className="relative h-64 drop-shadow-md">
       <div className="absolute inset-0">
         <Image
           src="/nav-bg.png"
@@ -23,19 +23,19 @@ export default function Navbar() {
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
         <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-extrabold">
           <Link
-            className="hover:text-amber-400 transition-all hover:animate-pulse"
+            className="hover:text-amber-400 transition-all "
             href="#history"
           >
             História
           </Link>
           <Link
-            className="hover:text-amber-400 transition-all hover:animate-pulse"
+            className="hover:text-amber-400 transition-all "
             href="#contact"
           >
             Contatos
           </Link>
           <Link
-            className="hover:text-amber-400 transition-all hover:animate-pulse"
+            className="hover:text-amber-400 transition-all "
             href="#gallery"
           >
             Galeria
