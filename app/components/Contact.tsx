@@ -8,20 +8,16 @@ export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState<boolean>(false);
 
-  const serviceID = process.env.SERVICE_ID;
-  const templateID = process.env.TEMPLATE_ID;
-  const userID = process.env.USER_ID;
-
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
     try {
       if (form.current) {
         const result: EmailJSResponseStatus = await emailjs.sendForm(
-          "service_dodm32w",
-          "template_8cqu7n7",
+          process.env.NEXT_PUBLIC_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_TEMPLATE_ID!,
           form.current,
-          "VZknpnI-pjMDvsOyv"
+          process.env.NEXT_PUBLIC_USER_ID!
         );
         console.log(result.text);
         notify(); // Notificar quando o e-mail for enviado com sucesso
@@ -44,6 +40,7 @@ export default function Contact() {
       progress: undefined,
       theme: "dark",
     });
+    form.current!.reset();
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
