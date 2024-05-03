@@ -135,7 +135,7 @@ export default function Gallery() {
         Galeria
       </h1>
       <Carousel
-        className="max-w-72 md:max-w-lg"
+        className="max-w-72 md:max-w-xl"
         opts={{ align: "start", loop: true }}
       >
         <CarouselContent>
