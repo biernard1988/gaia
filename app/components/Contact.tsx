@@ -14,10 +14,10 @@ export default function Contact() {
     try {
       if (form.current) {
         const result: EmailJSResponseStatus = await emailjs.sendForm(
-          process.env.NEXT_PUBLIC_SERVICE_ID!,
-          process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+          "service_dodm32w",
+          "template_8cqu7n7",
           form.current,
-          process.env.NEXT_PUBLIC_USER_ID!
+          "VZknpnI-pjMDvsOyv"
         );
         console.log(result.text);
         notify(); // Notificar quando o e-mail for enviado com sucesso
