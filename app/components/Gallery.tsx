@@ -129,41 +129,39 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="container mx-auto h-screen flex flex-col justify-center items-center gap-10 md:border-b md:border-neutral-800 md:mt-20"
+      className="container mx-auto h-screen flex flex-col justify-center items-center md:border-b md:border-neutral-800 my-12"
     >
       <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold">
         Galeria
       </h1>
-      <div className="">
-        <Carousel
-          className="max-w-72 md:max-w-lg"
-          opts={{ align: "start", loop: true }}
-        >
-          <CarouselContent>
-            {images.map((image) => (
-              <CarouselItem
-                key={image.id}
-                className="lg:basis-auto cursor-pointer flex flex-col items-center justify-center"
-                onClick={() => handleImageClick(image.src)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={500}
-                  height={500}
-                  className="rounded-lg"
-                />
+      <Carousel
+        className="max-w-72 md:max-w-lg"
+        opts={{ align: "start", loop: true }}
+      >
+        <CarouselContent>
+          {images.map((image) => (
+            <CarouselItem
+              key={image.id}
+              className="lg:basis-auto cursor-pointer flex flex-col items-center justify-center"
+              onClick={() => handleImageClick(image.src)}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={500}
+                height={500}
+                className="rounded-lg"
+              />
 
-                <p className="text-white text-xl font-semibold text-center">
-                  {image.caption}
-                </p>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
+              <p className="text-white text-xl font-semibold text-center">
+                {image.caption}
+              </p>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
       <Dialog open={!!selectedImage}>
         <DialogContent onClick={closeDialog}>
           {selectedImage && (

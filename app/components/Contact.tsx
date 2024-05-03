@@ -1,12 +1,12 @@
 "use client";
 import React, { useRef, useState, FormEvent } from "react";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { useToast } from "@/components/ui/use-toast";
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState<boolean>(false);
+  const { toast } = useToast();
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -20,27 +20,16 @@ export default function Contact() {
           "VZknpnI-pjMDvsOyv"
         );
         console.log(result.text);
-        notify(); // Notificar quando o e-mail for enviado com sucesso
+        toast({
+          description: "Mensagem enviada com sucesso!",
+        });
+        form.current!.reset();
       }
     } catch (error: any) {
       console.log(error.text);
     } finally {
       setIsSending(false);
     }
-  };
-
-  const notify = () => {
-    toast.success("Mensagem envianda com Sucesso!", {
-      position: "top-center",
-      autoClose: 2000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-    form.current!.reset();
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -56,16 +45,8 @@ export default function Contact() {
     if (allFieldsFilled) {
       await sendEmail(e); // Se todos os campos estiverem preenchidos, envia o e-mail
     } else {
-      // Caso contrário, exibe uma mensagem de erro
-      toast.error("Por favor preencha todo formulário!", {
-        position: "top-center",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
+      toast({
+        description: "Por favor, preencha todo formulário!",
       });
     }
   };
@@ -73,9 +54,13 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="h-4/5 text-white mx-auto container flex justify-center items-center w-100 md:my-14"
+      className="h-4/5 text-white mx-auto container flex justify-center items-center"
     >
-      <form onSubmit={handleSubmit} ref={form} className="w-full md:max-w-lg">
+      <form
+        onSubmit={handleSubmit}
+        ref={form}
+        className="w-full md:max-w-lg my-14"
+      >
         <div className="flex flex-col gap-6">
           <h1 className="text-center uppercase text-5xl md:text-6xl font-extrabold">
             Contato
@@ -112,18 +97,6 @@ export default function Contact() {
           >
             {isSending ? "Enviando..." : "Enviar"}
           </button>
-          <ToastContainer
-            position="top-center"
-            autoClose={2000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-            theme="dark"
-          />
         </div>
       </form>
     </section>
