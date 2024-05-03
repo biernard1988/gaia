@@ -31,7 +31,7 @@ export default function Contact() {
 
   const notify = () => {
     toast.success("Mensagem envianda com Sucesso!", {
-      position: "top-right",
+      position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
@@ -58,7 +58,7 @@ export default function Contact() {
     } else {
       // Caso contrário, exibe uma mensagem de erro
       toast.error("Por favor preencha todo formulário!", {
-        position: "top-right",
+        position: "top-center",
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -113,7 +113,7 @@ export default function Contact() {
             {isSending ? "Enviando..." : "Enviar"}
           </button>
           <ToastContainer
-            position="top-right"
+            position="top-center"
             autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
