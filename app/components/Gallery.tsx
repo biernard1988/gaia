@@ -136,7 +136,7 @@ export default function Gallery() {
       </h1>
       <div className="">
         <Carousel
-          className="max-w-xs md:max-w-xl"
+          className="max-w-72 md:max-w-lg"
           opts={{ align: "start", loop: true }}
         >
           <CarouselContent>
