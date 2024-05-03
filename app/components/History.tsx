@@ -7,16 +7,16 @@ export default function History() {
       id="history"
       className="container h-screen w-full text-white flex flex-col justify-center md:flex-row p-5 md:border-b md:border-neutral-800"
     >
-      <div className="place-content-center p-4">
+      <div className="place-content-center p-5">
         <Image
-          src="/front.png"
-          width={800}
-          height={600}
+          src="/we.jpg"
+          width={500}
+          height={500}
           alt="Foto da área frontal da Chácara"
-          className="rounded-3xl"
+          className="rounded-full"
         />
       </div>
-      <div className="md:w-1/2 flex flex-col justify-center items-end p-10 gap-10">
+      <div className="md:w-1/2 flex flex-col justify-center items-end p-5 gap-5">
         <h1 className="uppercase text-3xl md:text-6xl font-extrabold">
           História
         </h1>

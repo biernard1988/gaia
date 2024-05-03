@@ -8,7 +8,7 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="relative h-64 drop-shadow-md">
+    <nav className="relative h-64" id="home">
       <div className="absolute inset-0">
         <Image
           src="/nav-bg.png"
