@@ -5,17 +5,16 @@ export default function History() {
   return (
     <section
       id="history"
-      className="container h-screen w-full text-white flex flex-col justify-center md:flex-row p-5 md:border-b md:border-neutral-800"
+      className="container mx-auto h-screen w-full text-white flex flex-col items-center justify-center md:flex-row p-5 md:border-b md:border-neutral-800"
     >
-      <div className="place-content-center p-5">
-        <Image
-          src="/we.jpg"
-          width={500}
-          height={500}
-          alt="Foto da área frontal da Chácara"
-          className="rounded-full"
-        />
-      </div>
+      <Image
+        src="/we.jpg"
+        width={500}
+        height={500}
+        alt="Foto da área frontal da Chácara"
+        className="w-[300px] md:w-[500px] rounded-full"
+      />
+
       <div className="md:w-1/2 flex flex-col justify-center items-end p-5 gap-5">
         <h1 className="uppercase text-3xl md:text-6xl font-extrabold">
           História
