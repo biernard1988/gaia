@@ -8,9 +8,9 @@ import { Slide } from "react-awesome-reveal";
 export default function Home() {
   return (
     <>
-      <main className="container h-[70vh] md:h-screen mx-auto w-full flex flex-col md:flex-row items-center md:justify-center md:border-b md:border-neutral-800">
+      <main className="container h-[70vh] lg:h-screen mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-center lg:border-b lg:border-neutral-800">
         <Slide triggerOnce direction="up">
-          <div className="space-y-5 my-10 md:my-0 text-white">
+          <div className="space-y-5 my-10 lg:my-0 text-white">
             <h1 className="uppercase md:text-5xl text-4xl font-semibold font-sans">
               Chácara GAIA
             </h1>
