@@ -99,20 +99,38 @@ const images: ImageData[] = [
   {
     id: 14,
     src: "/photos/IMG-20231231-WA0030.jpg",
-    alt: "Image 13",
+    alt: "Image 14",
     caption: "Piscina",
   },
   {
     id: 15,
     src: "/photos/IMG-20231016-WA0044.jpg",
-    alt: "Image 13",
+    alt: "Image 15",
     caption: "Igarapé",
   },
   {
     id: 16,
     src: "/photos/IMG-20240213-WA0014.jpg",
-    alt: "Image 14",
+    alt: "Image 16",
     caption: "Igarapé",
+  },
+  {
+    id: 17,
+    src: "/photos/front.png",
+    alt: "Image 17",
+    caption: "Entrada da Chácara",
+  },
+  {
+    id: 18,
+    src: "/photos/arvore.jpg",
+    alt: "Image 18",
+    caption: "Árvores frutíferas",
+  },
+  {
+    id: 19,
+    src: "/photos/infantil.jpg",
+    alt: "Image 19",
+    caption: "Área de lazer infantil",
   },
 ];
 
