@@ -147,7 +147,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="container mx-auto h-[80vh] md:h-screen flex flex-col justify-center items-center md:border-b md:border-neutral-800 my-12"
+      className="container mx-auto h-screen flex flex-col justify-center items-center md:border-b md:border-neutral-800 my-12"
     >
       <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold">
         Galeria
