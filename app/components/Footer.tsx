@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import { LuFacebook, LuInstagram } from "react-icons/lu";
 import { TbBrandAirbnb } from "react-icons/tb";
 

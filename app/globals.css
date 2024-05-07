@@ -16,6 +16,7 @@ html {
 body {
   /* background-color: rgb(18, 18, 18); */
   background-image: url("../public/darker.jpg");
+  color: white;
 }
 
 input,

@@ -3,6 +3,7 @@ import Contact from "./components/Contact";
 import Gallery from "./components/Gallery";
 import History from "./components/History";
 import Image from "next/image";
+import Media from "./components/Media";
 import { Slide } from "react-awesome-reveal";
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
       </main>
       <Slide triggerOnce>
         <History />
+      </Slide>
+      <Slide triggerOnce direction="up">
+        <Media />
       </Slide>
       <Slide triggerOnce direction="right">
         <Gallery />
