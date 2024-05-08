@@ -4,7 +4,7 @@ export default function History() {
   return (
     <section
       id="history"
-      className="container mx-auto h-screen w-full text-white flex flex-col items-center justify-center lg:flex-row p-5 lg:border-b lg:border-neutral-800"
+      className="container mx-auto h-screen text-white flex flex-col items-center justify-center lg:flex-row p-5 lg:border-b lg:border-neutral-800"
     >
       <Image
         src="/we.jpg"

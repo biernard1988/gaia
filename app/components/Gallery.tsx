@@ -147,7 +147,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="container mx-auto h-screen flex flex-col justify-center items-center lg:border-b lg:border-neutral-800 my-12"
+      className="container mx-auto h-[90vh] md:h-screen flex flex-col justify-center items-center lg:border-b lg:border-neutral-800"
     >
       <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold">
         Galeria
@@ -186,8 +186,8 @@ export default function Gallery() {
             <Image
               src={selectedImage}
               alt="Imagem selecionada"
-              width={800}
-              height={800}
+              width={500}
+              height={500}
             />
           )}
           <DialogClose asChild>
