@@ -40,7 +40,7 @@ export default function Home() {
       <Slide triggerOnce direction="up">
         <Media />
       </Slide>
-      <Slide triggerOnce direction="right">
+      <Slide triggerOnce direction="up">
         <Gallery />
       </Slide>
       <Slide triggerOnce direction="up">

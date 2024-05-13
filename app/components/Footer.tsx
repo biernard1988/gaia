@@ -63,7 +63,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="text-center text-sm text-stone-400 mt-5 md:mt-0">
-        <p>&copy;Chácara Gaia - All Rights Reserverd</p>
+        <p>&copy;Chácara Gaia - All Rights Reserved</p>
       </div>
     </section>
   );
