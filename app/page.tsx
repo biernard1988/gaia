@@ -6,7 +6,7 @@ import Image from "next/image";
 import Media from "./components/Media";
 import { Slide } from "react-awesome-reveal";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <>
       <main className="container h-[70vh] lg:h-screen mx-auto w-full flex flex-col lg:flex-row items-center lg:justify-center lg:border-b lg:border-neutral-800">
@@ -48,4 +48,6 @@ export default function Home() {
       </Slide>
     </>
   );
-}
+};
+
+export default Home;

@@ -14,6 +14,9 @@ export default function Footer() {
           <Link className="hover:text-amber-300" href="#history">
             História
           </Link>
+          <Link className="hover:text-amber-300" href="#media">
+            A Chácara
+          </Link>
           <Link className="hover:text-amber-300" href="#gallery">
             Galeria
           </Link>

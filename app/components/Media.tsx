@@ -1,6 +1,9 @@
 export default function Media() {
   return (
-    <div className="container mx-auto md:h-screen flex flex-col items-center lg:border-b lg:border-neutral-800 my-10">
+    <div
+      id="media"
+      className="container mx-auto md:h-screen flex flex-col items-center lg:border-b lg:border-neutral-800 my-10"
+    >
       <h1 className="my-10 uppercase text-2xl md:text-3xl lg:text-4xl font-extrabold text-pretty">
         Venha conhecer este Paraíso...
       </h1>

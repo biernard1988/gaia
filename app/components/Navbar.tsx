@@ -12,9 +12,9 @@ export default function Navbar() {
       <div className="absolute inset-0">
         <Image
           src="/nav-bg.png"
-          alt="Foto da Chacara Panoramica"
+          alt="Foto da Chácara Panorâmica"
           fill
-          className="object-cover object-center blur-[0.5px]"
+          className="object-cover object-center"
           priority
         />
         <div className="absolute bg-black opacity-20 inset-0"></div>
@@ -43,7 +43,7 @@ export default function Navbar() {
         </div>
         <Image
           src="/logo.png"
-          alt="Logotipo da Chacara"
+          alt="Logotipo da Chácara"
           width={200}
           height={200}
           priority
