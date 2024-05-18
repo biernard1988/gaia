@@ -53,6 +53,7 @@ export default function Navbar() {
           <button
             onClick={() => setNavbarOpen(!navbarOpen)}
             className="text-amber-200 focus:outline-none"
+            aria-label="Toggle navigation menu"
           >
             {navbarOpen ? <HiX size={40} /> : <HiMenu size={40} />}
           </button>
@@ -63,18 +64,21 @@ export default function Navbar() {
             <Link
               href="#history"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
+              onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">História</span>
             </Link>
             <Link
               href="#gallery"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
+              onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">Galeria</span>
             </Link>
             <Link
               href="#contact"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
+              onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">Contatos</span>
             </Link>

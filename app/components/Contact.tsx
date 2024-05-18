@@ -71,6 +71,7 @@ export default function Contact() {
             name="email"
             id="email"
             placeholder="seu@email.com"
+            aria-label="Seu email"
           />
           <label htmlFor="subject">Assunto</label>
           <input
@@ -78,6 +79,7 @@ export default function Contact() {
             name="subject"
             id="subject"
             placeholder="Seu assunto..."
+            aria-label="Assunto"
           />
           <label htmlFor="message">Mensagem</label>
           <textarea
@@ -87,6 +89,7 @@ export default function Contact() {
             name="message"
             id="message"
             placeholder="Envie sua mensagem..."
+            aria-label="Mensagem"
           ></textarea>
           <button
             type="submit"

@@ -1,6 +1,6 @@
 export default function Media() {
   return (
-    <div
+    <section
       id="media"
       className="container mx-auto md:h-screen flex flex-col items-center lg:border-b lg:border-neutral-800 my-10"
     >
@@ -8,32 +8,34 @@ export default function Media() {
         Venha conhecer este Paraíso...
       </h1>
       <div className="w-full flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row justify-evenly items-center">
-        <div className="p-10 lg:p-0">
+        <article className="p-10 lg:p-0">
           <h2 className="font-semibold text-center mb-5">Como Chegar?</h2>
           <video
             className="rounded-lg"
             width="300"
             height="200"
             controls
-            preload="auto"
+            preload="metadata"
+            aria-label="Vídeo sobre como chegar à Chácara"
           >
             <source src="como_chegar.mp4" type="video/mp4" />
           </video>
-        </div>
-        <div className="p-10 lg:p-0">
+        </article>
+        <article className="p-10 lg:p-0">
           <h2 className="font-semibold text-center mb-5">A Chácara</h2>
           <video
             className="rounded-lg"
             width="300"
             height="200"
             controls
-            preload="auto"
+            preload="metadata"
+            aria-label="Vídeo de promoção da Chácara"
           >
             <source src="promotion.mp4" type="video/mp4" />
           </video>
-        </div>
+        </article>
 
-        <div className="p-10 lg:p-0">
+        <article className="p-10 lg:p-0">
           <h2 className="font-semibold text-center mb-5">
             Sessão Fotográfica na Chácara
           </h2>
@@ -42,12 +44,13 @@ export default function Media() {
             width="300"
             height="200"
             controls
-            preload="auto"
+            preload="metadata"
+            aria-label="Vídeo da sessão fotográfica na Chácara"
           >
             <source src="sessao_fotografica.mp4" type="video/mp4" />
           </video>
-        </div>
+        </article>
       </div>
-    </div>
+    </section>
   );
 }

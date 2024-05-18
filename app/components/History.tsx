@@ -12,6 +12,7 @@ export default function History() {
         height={500}
         alt="Foto da área frontal da Chácara"
         className="w-[300px] md:w-[500px] rounded-full"
+        aria-hidden="true"
       />
 
       <div className="lg:w-1/2 flex flex-col justify-center items-end p-5 gap-5">

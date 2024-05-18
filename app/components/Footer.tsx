@@ -43,6 +43,7 @@ export default function Footer() {
               className="hover:text-amber-300"
               href={"https://www.instagram.com/chacara_gaia/"}
               target="_blank"
+              aria-label="Instagram"
             >
               <LuInstagram />
             </Link>
@@ -50,6 +51,7 @@ export default function Footer() {
               className="hover:text-amber-300"
               href={"https://m.facebook.com/fehmeninaterapias"}
               target="_blank"
+              aria-label="Facebook"
             >
               <LuFacebook />
             </Link>
@@ -59,6 +61,7 @@ export default function Footer() {
                 "https://www.airbnb.com/rooms/967659341829689048?check_in=2024-04-05&check_out=2024-04-10&guests=1&adults=1&s=67&unique_share_id=77ddcc9f-3037-4c41-83b5-1478ed5f0efb"
               }
               target="_blank"
+              aria-label="Airbnb"
             >
               <TbBrandAirbnb />
             </Link>

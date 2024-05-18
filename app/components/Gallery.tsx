@@ -169,6 +169,7 @@ export default function Gallery() {
                 width={500}
                 height={500}
                 className="rounded-lg"
+                quality={75}
               />
 
               <p className="text-white text-xl font-semibold text-center">
@@ -186,12 +187,17 @@ export default function Gallery() {
             <Image
               src={selectedImage}
               alt="Imagem selecionada"
-              width={500}
-              height={500}
+              width={800}
+              height={800}
+              quality={100}
             />
           )}
           <DialogClose asChild>
-            <button className="font-semibold text-white" onClick={closeDialog}>
+            <button
+              className="font-semibold text-white"
+              onClick={closeDialog}
+              aria-label="Fechar"
+            >
               Fechar
             </button>
           </DialogClose>
