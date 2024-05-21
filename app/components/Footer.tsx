@@ -1,7 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import { LuFacebook, LuInstagram } from "react-icons/lu";
-import { TbBrandAirbnb } from "react-icons/tb";
+import Image from "next/image"
+import Link from "next/link"
+import { LuFacebook, LuInstagram } from "react-icons/lu"
+import { TbBrandAirbnb } from "react-icons/tb"
 
 export default function Footer() {
   return (
@@ -72,5 +72,5 @@ export default function Footer() {
         <p>&copy;Chácara Gaia - All Rights Reserved</p>
       </div>
     </section>
-  );
+  )
 }
