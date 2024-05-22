@@ -1,16 +1,16 @@
-"use client";
-import React, { useRef, useState, FormEvent } from "react";
-import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { useToast } from "@/components/ui/use-toast";
+"use client"
+import React, { useRef, useState, FormEvent } from "react"
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function Contact() {
-  const form = useRef<HTMLFormElement>(null);
-  const [isSending, setIsSending] = useState<boolean>(false);
-  const { toast } = useToast();
+  const form = useRef<HTMLFormElement>(null)
+  const [isSending, setIsSending] = useState<boolean>(false)
+  const { toast } = useToast()
 
   const sendEmail = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSending(true);
+    e.preventDefault()
+    setIsSending(true)
     try {
       if (form.current) {
         const result: EmailJSResponseStatus = await emailjs.sendForm(
@@ -18,38 +18,38 @@ export default function Contact() {
           "template_8cqu7n7",
           form.current,
           "VZknpnI-pjMDvsOyv"
-        );
-        console.log(result.text);
+        )
+        console.log(result.text)
         toast({
           description: "Mensagem enviada com sucesso!",
-        });
-        form.current!.reset();
+        })
+        form.current!.reset()
       }
     } catch (error: any) {
-      console.log(error.text);
+      console.log(error.text)
     } finally {
-      setIsSending(false);
+      setIsSending(false)
     }
-  };
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData: FormData = new FormData(form.current!);
+    e.preventDefault()
+    const formData: FormData = new FormData(form.current!)
 
     // Verifica se todos os campos estão preenchidos
     const allFieldsFilled: boolean = Array.from(formData.values()).every(
       (value: FormDataEntryValue) =>
         typeof value === "string" && value.trim() !== ""
-    );
+    )
 
     if (allFieldsFilled) {
-      await sendEmail(e); // Se todos os campos estiverem preenchidos, envia o e-mail
+      await sendEmail(e) // Se todos os campos estiverem preenchidos, envia o e-mail
     } else {
       toast({
         description: "Por favor, preencha todo formulário!",
-      });
+      })
     }
-  };
+  }
 
   return (
     <section
@@ -72,6 +72,7 @@ export default function Contact() {
             id="email"
             placeholder="seu@email.com"
             aria-label="Seu email"
+            className="p-2"
           />
           <label htmlFor="subject">Assunto</label>
           <input
@@ -80,10 +81,11 @@ export default function Contact() {
             id="subject"
             placeholder="Seu assunto..."
             aria-label="Assunto"
+            className="p-2"
           />
           <label htmlFor="message">Mensagem</label>
           <textarea
-            className="resize-none"
+            className="resize-none p-2"
             cols={10}
             rows={8}
             name="message"
@@ -103,5 +105,5 @@ export default function Contact() {
         </div>
       </form>
     </section>
-  );
+  )
 }
