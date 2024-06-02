@@ -1,11 +1,8 @@
-import Image from "next/image";
+import Image from "next/image"
 
 export default function History() {
   return (
-    <section
-      id="history"
-      className="container mx-auto h-screen text-white flex flex-col items-center justify-center lg:flex-row p-5 lg:border-b lg:border-neutral-800"
-    >
+    <section className="container mx-auto h-screen text-white flex flex-col items-center justify-center lg:flex-row p-5 lg:border-b lg:border-neutral-800">
       <Image
         src="/we.jpg"
         width={500}
@@ -29,5 +26,5 @@ export default function History() {
         </p>
       </div>
     </section>
-  );
+  )
 }

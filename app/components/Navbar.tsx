@@ -1,11 +1,11 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { HiMenu, HiX } from "react-icons/hi";
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import { HiMenu, HiX } from "react-icons/hi"
 
 export default function Navbar() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
     <nav className="relative h-64" id="home">
@@ -24,15 +24,12 @@ export default function Navbar() {
         <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-extrabold">
           <Link
             className="hover:text-amber-400 transition-all "
-            href="#history"
-          >
-            História
-          </Link>
-          <Link
-            className="hover:text-amber-400 transition-all "
             href="#contact"
           >
             Contatos
+          </Link>
+          <Link className="hover:text-amber-400 transition-all " href="#media">
+            A Chácara
           </Link>
           <Link
             className="hover:text-amber-400 transition-all "
@@ -62,11 +59,11 @@ export default function Navbar() {
         {navbarOpen && (
           <div className="md:hidden absolute top-[7rem] left-[15rem] flex flex-col items-center space-y-4 bg-black opacity-70 border border-1 rounded p-6">
             <Link
-              href="#history"
+              href="#media"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
               onClick={() => setNavbarOpen(false)}
             >
-              <span className="ml-2">História</span>
+              <span className="ml-2">A Chácara</span>
             </Link>
             <Link
               href="#gallery"
@@ -86,5 +83,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  );
+  )
 }

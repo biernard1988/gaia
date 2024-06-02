@@ -1,20 +1,20 @@
-"use client";
+"use client"
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog";
-import Image from "next/image";
-import { useState } from "react";
+} from "@/components/ui/carousel"
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
+import Image from "next/image"
+import { useState } from "react"
 
 interface ImageData {
-  id: number;
-  src: string;
-  alt: string;
-  caption: string;
+  id: number
+  src: string
+  alt: string
+  caption: string
 }
 
 const images: ImageData[] = [
@@ -94,7 +94,7 @@ const images: ImageData[] = [
     id: 13,
     src: "/photos/IMG-20230820-WA0002.jpg",
     alt: "Image 13",
-    caption: "Entrada Piscina",
+    caption: "Entrada da Piscina",
   },
   {
     id: 14,
@@ -132,18 +132,18 @@ const images: ImageData[] = [
     alt: "Image 19",
     caption: "Área de lazer infantil",
   },
-];
+]
 
 export default function Gallery() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
   const handleImageClick = (imageSrc: string) => {
-    setSelectedImage(imageSrc);
-  };
+    setSelectedImage(imageSrc)
+  }
 
   const closeDialog = () => {
-    setSelectedImage(null);
-  };
+    setSelectedImage(null)
+  }
   return (
     <section
       id="gallery"
@@ -169,7 +169,7 @@ export default function Gallery() {
                 width={500}
                 height={500}
                 className="rounded-lg"
-                quality={75}
+                quality={55}
               />
 
               <p className="text-white text-xl font-semibold text-center">
@@ -204,5 +204,5 @@ export default function Gallery() {
         </DialogContent>
       </Dialog>
     </section>
-  );
+  )
 }
