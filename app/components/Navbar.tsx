@@ -57,7 +57,7 @@ export default function Navbar() {
         </div>
         {/* Menu para dispositivos móveis */}
         {navbarOpen && (
-          <div className="md:hidden absolute top-[7rem] left-[15rem] flex flex-col items-center space-y-4 bg-black opacity-70 border border-1 rounded p-6">
+          <div className="md:hidden absolute top-[7rem] left-[15rem] flex flex-col items-center space-y-4 bg-black opacity-70 border border-1 rounded p-5">
             <Link
               href="#media"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
