@@ -33,7 +33,7 @@ export default function Footer() {
 
         <div className="flex flex-col w-1/3 items-end gap-5">
           <div className="text-end">
-            <h3>Estr. do Baixo Rio, n-410</h3>
+            <h3>Estr. do Baixo Rio, 410</h3>
             <h3>Tel: 92 99192-2190</h3>
             <h3>Rio Preto da Eva</h3>
             <h3>CEP: 69117-000</h3>
