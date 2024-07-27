@@ -11,13 +11,13 @@ export default function Navbar() {
     <nav className="relative h-64" id="home">
       <div className="absolute inset-0">
         <Image
-          src="/nav-bg.png"
+          src="/nav-bg.jpg"
           alt="Foto da Chácara Panorâmica"
           fill
           className="object-cover object-center"
           priority
         />
-        <div className="absolute bg-black opacity-20 inset-0"></div>
+        <div className="absolute bg-black opacity-40 inset-0"></div>
       </div>
 
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
