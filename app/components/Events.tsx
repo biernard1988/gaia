@@ -30,7 +30,6 @@ export default function Events() {
         muted
         autoPlay
         controls
-        preload="metadata"
         aria-label="Evento na Chácara em Agosto 2024"
       >
         <source src="event_august.mp4" type="video/mp4" />
