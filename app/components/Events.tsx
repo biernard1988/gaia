@@ -11,7 +11,9 @@ export default function Events() {
           Eventos
         </h1>
         <div className="space-y-10">
-          <h2 className="font-extrabold text-xl text-center">NÃO PERCA!</h2>
+          <h2 className="font-extrabold text-xl text-center text-yellow-200">
+            NÃO PERCA!
+          </h2>
           <h2 className="font-semibold text-2xl text-center">
             1° Gaia Retreat - 3 e 4 de Agosto
           </h2>

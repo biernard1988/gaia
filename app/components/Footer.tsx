@@ -27,8 +27,8 @@ export default function Footer() {
             <Image
               src="/logo-cru.png"
               alt="Logo Chácara"
-              width={100}
-              height={100}
+              width={120}
+              height={120}
             />
           </Link>
         </div>
