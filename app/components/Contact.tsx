@@ -2,8 +2,8 @@
 import React, { useRef, useState, FormEvent } from "react"
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser"
 import { useToast } from "@/components/ui/use-toast"
-import Link from "next/link"
 import { TbArrowUpTail } from "react-icons/tb"
+import LinkWithoutId from "./LinkWithoutId"
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null)
@@ -104,13 +104,13 @@ export default function Contact() {
           >
             {isSending ? "Enviando..." : "Enviar"}
           </button>
-          <Link
+          <LinkWithoutId
             className="md:hidden mt-5 text-3xl font-extrabold self-center animate-pulse
           > text-yellow-200"
             href="#home"
           >
             <TbArrowUpTail />
-          </Link>
+          </LinkWithoutId>
         </div>
       </form>
     </section>

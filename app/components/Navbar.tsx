@@ -1,8 +1,8 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
 import { useState } from "react"
 import { HiMenu, HiX } from "react-icons/hi"
+import LinkWithoutId from "./LinkWithoutId"
 
 export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false)
@@ -21,25 +21,31 @@ export default function Navbar() {
       </div>
 
       <div className="relative container mx-auto flex flex-col justify-center items-center space-y-4 text-white px-4 z-10">
-        <div className="hidden md:flex justify-evenly w-1/2 mt-5 text-xl uppercase font-semibold">
-          <Link
+        <div className="hidden md:flex justify-evenly w-2/3 mt-5 text-xl uppercase font-semibold">
+          <LinkWithoutId
             className="hover:text-amber-400 transition-all "
             href="#contact"
           >
             Contatos
-          </Link>
-          <Link className="hover:text-amber-400 transition-all " href="#media">
+          </LinkWithoutId>
+          <LinkWithoutId
+            className="hover:text-amber-400 transition-all "
+            href="#media"
+          >
             A Chácara
-          </Link>
-          <Link className="hover:text-amber-400 transition-all " href="#events">
+          </LinkWithoutId>
+          <LinkWithoutId
+            className="hover:text-amber-400 transition-all "
+            href="#events"
+          >
             Eventos
-          </Link>
-          <Link
+          </LinkWithoutId>
+          <LinkWithoutId
             className="hover:text-amber-400 transition-all "
             href="#gallery"
           >
             Galeria
-          </Link>
+          </LinkWithoutId>
         </div>
         <Image
           src="/logo.png"
@@ -61,34 +67,34 @@ export default function Navbar() {
         {/* Menu para dispositivos móveis */}
         {navbarOpen && (
           <div className="md:hidden absolute top-[7rem] left-[15rem] flex flex-col items-center space-y-4 bg-black opacity-70 border border-1 rounded p-5">
-            <Link
+            <LinkWithoutId
               href="#media"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
               onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">A Chácara</span>
-            </Link>
-            <Link
+            </LinkWithoutId>
+            <LinkWithoutId
               href="#events"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
               onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">Eventos</span>
-            </Link>
-            <Link
+            </LinkWithoutId>
+            <LinkWithoutId
               href="#gallery"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
               onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">Galeria</span>
-            </Link>
-            <Link
+            </LinkWithoutId>
+            <LinkWithoutId
               href="#contact"
               className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
               onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">Contatos</span>
-            </Link>
+            </LinkWithoutId>
           </div>
         )}
       </div>
