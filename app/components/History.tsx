@@ -16,9 +16,7 @@ export default function History() {
       />
 
       <div className="lg:w-1/2 flex flex-col justify-center items-end p-5 gap-5">
-        <h1 className="uppercase text-3xl md:text-6xl font-extrabold">
-          História
-        </h1>
+        <h1 className="italic text-3xl md:text-6xl font-extrabold">História</h1>
         <p className="sm:text-xl md:text-2xl lg:text-2xl italic tracking-widest text-end">
           O nome <b>Gaia</b> tem origem grega e está associado à personificação
           feminina da Terra na mitologia. Gaia é considerada a mãe primordial,

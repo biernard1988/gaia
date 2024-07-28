@@ -1,10 +1,11 @@
-"use client";
-import Contact from "./components/Contact";
-import Gallery from "./components/Gallery";
-import History from "./components/History";
-import Image from "next/image";
-import Media from "./components/Media";
-import { Slide } from "react-awesome-reveal";
+"use client"
+import Contact from "./components/Contact"
+import Gallery from "./components/Gallery"
+import History from "./components/History"
+import Image from "next/image"
+import Media from "./components/Media"
+import { Slide } from "react-awesome-reveal"
+import Events from "./components/Events"
 
 const Home: React.FC = () => {
   return (
@@ -38,6 +39,9 @@ const Home: React.FC = () => {
         <History />
       </Slide>
       <Slide triggerOnce direction="up">
+        <Events />
+      </Slide>
+      <Slide triggerOnce direction="up">
         <Media />
       </Slide>
       <Slide triggerOnce direction="up">
@@ -47,7 +51,7 @@ const Home: React.FC = () => {
         <Contact />
       </Slide>
     </>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

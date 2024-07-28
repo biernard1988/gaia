@@ -2,6 +2,8 @@
 import React, { useRef, useState, FormEvent } from "react"
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser"
 import { useToast } from "@/components/ui/use-toast"
+import Link from "next/link"
+import { TbArrowUpTail } from "react-icons/tb"
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null)
@@ -62,7 +64,7 @@ export default function Contact() {
         className="w-full md:max-w-lg my-14"
       >
         <div className="flex flex-col gap-6">
-          <h1 className="text-center uppercase text-5xl md:text-6xl font-extrabold">
+          <h1 className="text-center italic text-5xl md:text-6xl font-extrabold">
             Contato
           </h1>
           <label htmlFor="email">Seu email</label>
@@ -102,6 +104,13 @@ export default function Contact() {
           >
             {isSending ? "Enviando..." : "Enviar"}
           </button>
+          <Link
+            className="md:hidden mt-5 text-3xl font-extrabold self-center animate-pulse
+          > text-yellow-200"
+            href="#home"
+          >
+            <TbArrowUpTail />
+          </Link>
         </div>
       </form>
     </section>

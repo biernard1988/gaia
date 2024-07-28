@@ -149,7 +149,7 @@ export default function Gallery() {
       id="gallery"
       className="container mx-auto h-[90vh] md:h-screen flex flex-col justify-center items-center lg:border-b lg:border-neutral-800"
     >
-      <h1 className="text-white uppercase text-5xl md:text-6xl font-extrabold">
+      <h1 className="text-white italic text-5xl md:text-6xl font-extrabold">
         Galeria
       </h1>
       <Carousel

@@ -31,6 +31,9 @@ export default function Navbar() {
           <Link className="hover:text-amber-400 transition-all " href="#media">
             A Chácara
           </Link>
+          <Link className="hover:text-amber-400 transition-all " href="#events">
+            Eventos
+          </Link>
           <Link
             className="hover:text-amber-400 transition-all "
             href="#gallery"
@@ -39,6 +42,7 @@ export default function Navbar() {
           </Link>
         </div>
         <Image
+          className="animate-pulse"
           src="/logo.png"
           alt="Logotipo da Chácara"
           width={200}
@@ -64,6 +68,13 @@ export default function Navbar() {
               onClick={() => setNavbarOpen(false)}
             >
               <span className="ml-2">A Chácara</span>
+            </Link>
+            <Link
+              href="#events"
+              className="text-xl hover:text-amber-400 transition-all hover:animate-pulse flex items-center"
+              onClick={() => setNavbarOpen(false)}
+            >
+              <span className="ml-2">Eventos</span>
             </Link>
             <Link
               href="#gallery"

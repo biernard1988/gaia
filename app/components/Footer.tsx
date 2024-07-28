@@ -9,26 +9,28 @@ export default function Footer() {
     <section className="h-56 place-content-center px-8 lg:px-20 text-white border-t border-neutral-800">
       <div className="flex justify-between mt-10">
         <div className="flex flex-col w-1/3 gap-5">
-          <Link className="hover:text-amber-300" href="#home">
-            Início
-          </Link>
           <Link className="hover:text-amber-300" href="#history">
             História
           </Link>
           <Link className="hover:text-amber-300" href="#media">
             A Chácara
           </Link>
+          <Link className="hover:text-amber-300" href="#events">
+            Eventos
+          </Link>
           <Link className="hover:text-amber-300" href="#gallery">
             Galeria
           </Link>
         </div>
-        <div className="hidden w-1/3 justify-center items-start md:flex">
-          <Image
-            src="/logo-cru.png"
-            alt="Logo Chácara"
-            width={100}
-            height={100}
-          />
+        <div className="hidden w-1/3 justify-center items-start md:flex animate-pulse">
+          <Link href="#home">
+            <Image
+              src="/logo-cru.png"
+              alt="Logo Chácara"
+              width={100}
+              height={100}
+            />
+          </Link>
         </div>
 
         <div className="flex flex-col w-1/3 items-end gap-5">
