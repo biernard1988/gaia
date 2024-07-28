@@ -42,7 +42,6 @@ export default function Navbar() {
           </Link>
         </div>
         <Image
-          className="animate-pulse"
           src="/logo.png"
           alt="Logotipo da Chácara"
           width={200}
