@@ -39,8 +39,8 @@ export default function Footer() {
           <div className="text-end">
             <h3>Estr. do Baixo Rio, 410</h3>
             <h3>Tel: 92 99192-2190</h3>
-            <h3>Rio Preto da Eva</h3>
             <h3>CEP: 69117-000</h3>
+            <h3>Rio Preto da Eva</h3>
             <h3>Amazonas - Brasil</h3>
             <h3>chacaragaiaam@gmail.com</h3>
           </div>
